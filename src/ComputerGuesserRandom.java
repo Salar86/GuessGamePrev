@@ -1,6 +1,7 @@
 public class ComputerGuesserRandom implements IGuesser {
     private int min;
     private int max;
+    private int randomGuess;
 
     public void yourTurn() {}
 
@@ -17,7 +18,8 @@ public class ComputerGuesserRandom implements IGuesser {
 
     public int makeGuess()
     {
-        return (int) ((Math.random() * (max - min)) + min);
+        randomGuess = (int) ((Math.random() * (max - min)) + min);
+        return randomGuess;
     }
 
     public void guessFeedback(Answer answer)
@@ -25,10 +27,10 @@ public class ComputerGuesserRandom implements IGuesser {
         switch(answer)
         {
             case TOO_LOW:
-                min = (int) (((Math.random() * (max - min)) + min) + 1);
+                min = randomGuess + 1;
                 break;
             case TOO_HIGH:
-                max = (int) (((Math.random() * (max - min)) + min) - 1);
+                max = randomGuess - 1;
                 break;
             case CORRECT:
                 break;
