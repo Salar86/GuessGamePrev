@@ -69,9 +69,13 @@ public class GameCtrl
 
 	public static void main(String[] args)
 	{
-		IThinker thinker = chooseType("Thinker") == 1 ? new HumanThinker() : new ComputerThinker();
-		IGuesser guesser = chooseType("Guesser") == 1 ? new HumanGuesser() : new ComputerGuesserRandom();
-		GameCtrl gc = new GameCtrl(0, 100);
-		gc.runGame(thinker, guesser);
+		//IThinker thinker = chooseType("Thinker") == 1 ? new HumanThinker() : new ComputerThinker();
+		//IGuesser guesser = chooseType("Guesser") == 1 ? new HumanGuesser() : new ComputerGuesserRandom();
+		//GameCtrl gc = new GameCtrl(0, 100);
+		//gc.runGame(thinker, guesser);
+		MainFeature mainFeature = new MainFeature();
+		NewFeature newFeature = new NewFeature();
+		System.out.println(mainFeature);
+		System.out.println(newFeature);
 	}
 }
