@@ -42,5 +42,3 @@ public class ComputerGuesserRandom implements IGuesser {
     public void endOfGame(int numberOfGuesses, String opponent)
     {}
 }
-
-
